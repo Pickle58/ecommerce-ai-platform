@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import type { OrderSummary } from "@/lib/ai/tools/get-my-orders";
 import { getOrderStatus } from "@/lib/constants/orderStatus";
