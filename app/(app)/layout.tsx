@@ -5,6 +5,8 @@ import { Toaster } from "@/components/ui/sonner";
 import { Header } from "@/components/app/Header";
 import { ChatStoreProvider } from "@/lib/store/chat-store-provider";
 import { CartSheet } from "@/components/app/CartSheet";
+import { ChatSheet } from "@/components/app/ChatSheet";
+import { AppShell } from "@/components/app/AppShell";
 
 
 function Layout({ children }: { children: React.ReactNode }) {
@@ -12,12 +14,12 @@ function Layout({ children }: { children: React.ReactNode }) {
     <ClerkProvider>
       <CartStoreProvider>
         <ChatStoreProvider>
-          {/* <AppShell> */}
+          <AppShell>
           <Header />
           <main>{children}</main>
-          {/* </AppShell> */}
+          </AppShell>
           <CartSheet />
-          {/* <ChatSheet /> */}
+          <ChatSheet />
           <Toaster position="bottom-center" />
           <SanityLive />
         </ChatStoreProvider>
